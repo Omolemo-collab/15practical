@@ -8,9 +8,10 @@ pubilc class anagrams {
         Arrays.sort(chars);
         return new String(chars); 
     }
+
     public static void main(String[] args) throws Exception {
 
-        BuffererReader reader = new BuffererReader(new FileReader("ulysses.text"));
+        BuffererReader reader = new BuffererReader(new FileReader("joyce1922_ulysses.text "));
         String line; 
         while ((line = reader.readline()) != null){
 
@@ -26,7 +27,7 @@ pubilc class anagrams {
                 groups.get(sig).add(word);
             }
 
-            Bufferedwriter writer = new Bufferedwriter(new Filewriter("theAnagrams.text"))
+            Bufferedwriter writer = new Bufferedwriter(new Filewriter("theAnagrams.tex"))
             writer.write("anagrams in the text: \n");
             for (List<String> anagramGroup : groups.values()){
                 if (anagramGroup.size() > 1){
@@ -37,6 +38,11 @@ pubilc class anagrams {
 
             reader.close();
 
+            for (List<String>)anagramGroup: groups.values(){
+                if(anagramGroup.size() > 1){
+                    System.out.println(anogramGroup);
+                }
+            }
         }
     }
 }
